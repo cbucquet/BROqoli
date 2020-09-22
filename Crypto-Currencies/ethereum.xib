@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ethereum" customModule="MoniPulse" customModuleProvider="target">
+            <connections>
+                <outlet property="augmente" destination="z3t-Hq-54k" id="5IW-ab-Gbn"/>
+                <outlet property="currency" destination="kxJ-dt-mYw" id="iMR-XA-X9e"/>
+                <outlet property="marketvalue" destination="aQ6-UJ-SuF" id="t6m-44-a8b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wallet" destination="qJx-LH-5ea" id="jRv-gy-3uJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJx-LH-5ea">
+                    <rect key="frame" x="178" y="51.5" width="19" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <color key="textColor" red="0.6705882353" green="0.66974983809999999" blue="0.66974983809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxJ-dt-mYw">
+                    <rect key="frame" x="175" y="544" width="25" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <color key="textColor" red="0.27132091019999999" green="0.27132091019999999" blue="0.27132091019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ETHEREUM_NAV-BAR-LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="kDp-Nc-JOp">
+                    <rect key="frame" x="4" y="154.5" width="366" height="95"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kDp-Nc-JOp" secondAttribute="height" multiplier="366:95" id="jDb-et-5Wv"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="aQ6-UJ-SuF">
+                    <rect key="frame" x="169" y="307.5" width="37" height="92"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="77"/>
+                    <color key="textColor" red="0.27132091019999999" green="0.27132091019999999" blue="0.27132091019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3t-Hq-54k">
+                    <rect key="frame" x="170" y="488" width="35" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" red="0.21278787909999999" green="0.21278787909999999" blue="0.21278787909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="since you last checked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02H-yZ-mhF">
+                    <rect key="frame" x="123" y="524.5" width="128.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.21278787909999999" green="0.21278787909999999" blue="0.21278787909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq1-KC-REN">
+                    <rect key="frame" x="176.5" y="29" width="22.5" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.6705882353" green="0.66974983809999999" blue="0.66974983809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.39451803951340347" green="0.44352817889525081" blue="0.72208984375000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qJx-LH-5ea" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2Ea-vx-ByX"/>
+                <constraint firstItem="z3t-Hq-54k" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4ci-ek-alO"/>
+                <constraint firstItem="kxJ-dt-mYw" firstAttribute="top" secondItem="02H-yZ-mhF" secondAttribute="bottom" constant="5" id="5nk-wO-iJI"/>
+                <constraint firstItem="kq1-KC-REN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="29" id="635-iZ-XVt"/>
+                <constraint firstItem="kxJ-dt-mYw" firstAttribute="top" secondItem="02H-yZ-mhF" secondAttribute="bottom" constant="5" id="Dg7-bF-3XX"/>
+                <constraint firstItem="kDp-Nc-JOp" firstAttribute="top" secondItem="qJx-LH-5ea" secondAttribute="bottom" constant="55" id="Dzi-ed-iqE"/>
+                <constraint firstItem="qJx-LH-5ea" firstAttribute="top" secondItem="kq1-KC-REN" secondAttribute="bottom" constant="1" id="EoW-hd-qfg"/>
+                <constraint firstItem="02H-yZ-mhF" firstAttribute="top" secondItem="z3t-Hq-54k" secondAttribute="bottom" constant="5" id="G3l-Ks-5Uk"/>
+                <constraint firstItem="aQ6-UJ-SuF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HWT-zL-wMH"/>
+                <constraint firstItem="02H-yZ-mhF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hk6-Ca-6kN"/>
+                <constraint firstItem="kq1-KC-REN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YTp-q4-Erf"/>
+                <constraint firstAttribute="bottom" secondItem="kxJ-dt-mYw" secondAttribute="bottom" constant="75" id="hPT-7a-yoc"/>
+                <constraint firstItem="kxJ-dt-mYw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jl4-Y7-Acr"/>
+                <constraint firstItem="aQ6-UJ-SuF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="20" id="kFP-sz-a5l"/>
+                <constraint firstAttribute="trailing" secondItem="kDp-Nc-JOp" secondAttribute="trailing" constant="5" id="mNT-T7-4XU"/>
+                <constraint firstItem="kDp-Nc-JOp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="4" id="oz8-TF-n37"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ETHEREUM_NAV-BAR-LOGO" width="1672" height="420"/>
+    </resources>
+</document>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewBitShares" customModule="MoniPulse" customModuleProvider="target">
+            <connections>
+                <outlet property="augmente" destination="x3G-87-5yQ" id="Am7-At-grN"/>
+                <outlet property="currency" destination="D7q-i5-t80" id="3we-5u-H3p"/>
+                <outlet property="marketvalue" destination="FOB-cO-RaF" id="WtS-r2-tH1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wallet" destination="M9Y-d7-khe" id="UyM-4M-4MN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitshares-logo" translatesAutoresizingMaskIntoConstraints="NO" id="8nN-F7-Kb4">
+                    <rect key="frame" x="5" y="142" width="365" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8nN-F7-Kb4" secondAttribute="height" multiplier="61:15" id="cPb-od-gMO"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9Y-d7-khe">
+                    <rect key="frame" x="178.5" y="51" width="18" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <color key="textColor" red="0.25105589109999998" green="0.65922407009999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7q-i5-t80">
+                    <rect key="frame" x="175" y="544" width="25" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <color key="textColor" red="0.27132091019999999" green="0.27132091019999999" blue="0.27132091019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FOB-cO-RaF">
+                    <rect key="frame" x="169" y="307.5" width="37" height="92"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="77"/>
+                    <color key="textColor" red="0.27132091019999999" green="0.27132091019999999" blue="0.27132091019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3G-87-5yQ">
+                    <rect key="frame" x="170" y="488" width="35" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" red="0.21278787909999999" green="0.21278787909999999" blue="0.21278787909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="since you last checked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFE-AN-ZiT">
+                    <rect key="frame" x="123.5" y="524.5" width="128.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.21278787909999999" green="0.21278787909999999" blue="0.21278787909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jck-CY-Joc">
+                    <rect key="frame" x="176.5" y="29" width="22.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.25105589109999998" green="0.65922407009999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.4553472878" blue="0.94421955960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CFE-AN-ZiT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="05x-JO-t4T"/>
+                <constraint firstAttribute="trailing" secondItem="8nN-F7-Kb4" secondAttribute="trailing" constant="5" id="0nB-6C-2HD"/>
+                <constraint firstItem="M9Y-d7-khe" firstAttribute="top" secondItem="Jck-CY-Joc" secondAttribute="bottom" constant="1" id="1bm-FN-CNh"/>
+                <constraint firstItem="Jck-CY-Joc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2Gy-28-kR7"/>
+                <constraint firstItem="FOB-cO-RaF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Cq6-LF-ynt"/>
+                <constraint firstItem="D7q-i5-t80" firstAttribute="top" secondItem="CFE-AN-ZiT" secondAttribute="bottom" constant="5" id="Ekm-Dh-Cpo"/>
+                <constraint firstItem="M9Y-d7-khe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RG8-2G-Y8w"/>
+                <constraint firstItem="D7q-i5-t80" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S0i-X9-KVD"/>
+                <constraint firstItem="x3G-87-5yQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="V26-Df-rVf"/>
+                <constraint firstItem="8nN-F7-Kb4" firstAttribute="top" secondItem="M9Y-d7-khe" secondAttribute="bottom" constant="43" id="WTc-Fa-Fr0"/>
+                <constraint firstItem="CFE-AN-ZiT" firstAttribute="top" secondItem="x3G-87-5yQ" secondAttribute="bottom" constant="5" id="fxl-M6-Rzg"/>
+                <constraint firstItem="M9Y-d7-khe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="51" id="jXe-l9-Cvd"/>
+                <constraint firstItem="FOB-cO-RaF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="20" id="obo-ys-cMe"/>
+                <constraint firstItem="8nN-F7-Kb4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="pZG-es-AS6"/>
+                <constraint firstAttribute="bottom" secondItem="D7q-i5-t80" secondAttribute="bottom" constant="75" id="pto-Ba-D0k"/>
+                <constraint firstItem="Jck-CY-Joc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="29" id="vbY-8l-u4w"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="bitshares-logo" width="1231" height="396"/>
+    </resources>
+</document>

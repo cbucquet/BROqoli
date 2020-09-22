@@ -9,14 +9,45 @@
 import UIKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var FakeAllCrypo = [Crypto]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        
+        GetMarketValues()
+        
+        
+        allthecryptos = [Bitcoin, Ethereum, Steemit, Litecoin, Ripple, EthereumClassic, Dash, Monero, Bitshares, NEM, Stratis, BitcoinCash, NEO]
+        LastAllTheCryptos = [Bitcoin, Ethereum, Steemit, Litecoin, Ripple, EthereumClassic, Dash, Monero, Bitshares, NEM, Stratis, BitcoinCash, NEO]
+        
+        if let saveddata = UserDefaults.standard.object(forKey: "mesCryptos") {
+            allthecryptos = (NSKeyedUnarchiver.unarchiveObject(with: saveddata as! Data) as? [Crypto])!
+            LastAllTheCryptos = (NSKeyedUnarchiver.unarchiveObject(with: saveddata as! Data) as? [Crypto])!
+        }
+        
+        let NotFirstTimeDefault = UserDefaults.standard
+        NotFirstTime = NotFirstTimeDefault.bool(forKey: "First")
+        NotFirstDol = NotFirstTime
+        if NotFirstTime == false{
+            for index in 3...allthecryptos.count - 1{
+                allthecryptos[index].show = false
+            }
+            dollars = true
+            NotFirstTime = true
+            NotFirstTimeDefault.set(NotFirstTime, forKey: "First")
+        }
+        
+        
+        Thread.sleep(forTimeInterval: 1.000)
+        
         return true
+    
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -27,10 +58,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        var nbset = 0
+        for _ in allthecryptos{
+            LastAllTheCryptos[nbset].marketValue = allthecryptos[nbset].marketValue
+            nbset += 1
+        }
+        
+        nbset = 0
+        for _ in allthecryptos{
+            LastAllTheCryptos[nbset].marketValueEuro = allthecryptos[nbset].marketValueEuro
+            nbset += 1
+        }
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        
+        GetMarketValues()
+        
+        Thread.sleep(forTimeInterval: 0.5000)
+        
+        Update_Cours()
+        
+        Update_Valeur()
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -39,8 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        SaveMyCryptos()
     }
-
-
 }
 
