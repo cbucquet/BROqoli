@@ -4,4 +4,4 @@ BROqoli is different from the other wallets because all the information is in a 
 This app was made in 2017, and hasn't been changed since.
 
 ## Usage
-The website and the app are no longer supported.
+As of May 2019, the website and the app are no longer supported.
